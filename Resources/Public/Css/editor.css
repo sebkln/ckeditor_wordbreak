@@ -1,0 +1,11 @@
+.ck.ck-wbr {
+    border-radius: .15em;
+    color: #2e3b64;
+    background-color: rgba(0, 120, 230, .1);
+}
+
+.ck.ck-wbr::before {
+    content: '↵';
+    margin-left: .1em;
+    margin-right: .1em;
+}

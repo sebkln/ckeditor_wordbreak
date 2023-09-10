@@ -1,0 +1,3 @@
+// Allow <wbr> tag rendering in frontend:
+lib.parseFunc.allowTags := addToList(wbr)
+lib.parseFunc_RTE.allowTags := addToList(wbr)
