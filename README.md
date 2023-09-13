@@ -62,7 +62,7 @@ editor:
   config:
     # 1. Import the plugin:
     importModules:
-      - '@sebkln/ckeditor/wordbreak.js'
+      - '@sebkln/ckeditor-wordbreak'
 
     toolbar:
       items:
