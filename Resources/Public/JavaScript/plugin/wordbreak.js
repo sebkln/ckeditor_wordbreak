@@ -11,6 +11,7 @@ export default class WordBreak extends Core.Plugin {
         // Register <wbr>:
         model.schema.register('wbrTag', {
             allowWhere: '$text',
+            allowAttributesOf: '$text',
             isInline: true
         });
 
@@ -45,7 +46,7 @@ export default class WordBreak extends Core.Plugin {
             button.on('execute', () => {
                 model.change(writer => {
                     const insertPosition = editor.model.document.selection.getFirstPosition();
-                    const wbrTag = writer.createElement('wbrTag');
+                    const wbrTag = writer.createElement('wbrTag', model.document.selection.getAttributes());
                     writer.insert(wbrTag, insertPosition);
                 });
             });
