@@ -8,7 +8,7 @@ TYPO3 12.4.0 - 13.4.99
 
 ## What does this extension do?
 
-- This extension provides general support for the `<wbr>` HTML element in CKEditor 5 and TYPO3 v12
+- This extension provides general support for the `<wbr>` HTML element in CKEditor 5 and TYPO3
 - Editors can insert the element by pressing a button at the current cursor position
 - All `<wbr>` elements are highlighted in the editor (similar to the softhyphen)
 
@@ -52,7 +52,9 @@ The extension needs to be installed as any other extension of TYPO3 CMS.
 Perform the following steps:
 
 1. Load and install the extension
-2. Include the static template *"CKEditor plugin: wordbreak"* into your TypoScript template
+2. **If necessary,** include the static template *"CKEditor plugin: wordbreak"* into your TypoScript template,
+   or load the hidden Site Set `sebkln/ckeditor-wordbreak` as a dependency
+   (see note below about `lib.parseFunc` in TYPO3 v13+)
 3. Extend your CKEditor configuration (see below)
 
 ### CKEditor configuration
@@ -74,3 +76,15 @@ processing:
   allowTags:
     - wbr
 ```
+
+### Using `lib.parseFunc` in TYPO3 v13+
+
+Beginning with TYPO3 v13, the properties `allowTags` and `denyTags` are now
+[optional](https://docs.typo3.org/c/typo3/cms-core/main/en-us/Changelog/13.2/Feature-104220-MakeParseFuncAllowTagsAndDenyTagsOptional.html).
+
+This means you **must only** add this extension's TypoScript if you use a custom version of `lib.parseFunc_RTE`
+that already uses `allowTags` to restrict the HTML tags.
+Otherwise, all tags except `<wbr>` would be encoded in the frontend.
+
+Please note that this change only applies to TypoScript.
+`allowTags` is still needed in the CKEditor's YAML configuration for processing.

@@ -1,2 +1,3 @@
 name: sebkln/ckeditor-wordbreak
 label: 'CKEditor plugin: wordbreak'
+hidden: true
