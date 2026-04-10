@@ -4,7 +4,7 @@
 
 ## Compatibility
 
-TYPO3 12.4.0 - 13.4.99
+TYPO3 12.4.0 - 14.3.99
 
 ## What does this extension do?
 

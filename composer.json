@@ -1,7 +1,7 @@
 {
 	"name": "sebkln/ckeditor-wordbreak",
 	"type": "typo3-cms-extension",
-	"description": "Adds the <wbr> HTML element to CKEditor 5 in TYPO3. If set in a long word, the browser may break a line (without adding a hyphen character). Useful e.g. for long URLs and file paths.",
+	"description": "CKEditor 5: wordbreak Plugin - Adds the <wbr> HTML element to CKEditor 5 in TYPO3. If set in a long word, the browser may break a line (without adding a hyphen character). Useful e.g. for long URLs and file paths.",
 	"license": [
 		"GPL-2.0-or-later"
 	],
@@ -24,8 +24,8 @@
 		}
 	],
 	"require": {
-		"typo3/cms-core": ">=12.4.0 <13.4.99",
-		"typo3/cms-rte-ckeditor": ">=12.4.0 <13.4.99"
+		"typo3/cms-core": ">=12.4.0 <14.3.99",
+		"typo3/cms-rte-ckeditor": ">=12.4.0 <14.3.99"
 	},
 	"extra": {
 		"typo3/cms": {
