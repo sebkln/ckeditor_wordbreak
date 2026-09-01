@@ -101,7 +101,7 @@ the following error will occur when opening a page in the **Visual Editor backen
 
 Switch to the named import shown in the configuration above to fix this issue.
 
-When using the Visual Editor backend module, the _WordBreak_ button will work as expected in richtet fields.
+When using the Visual Editor backend module, the _WordBreak_ button will work as expected in richtext fields.
 
 Please note that the Visual Editor only shows frontend styles.
 Therefore, the styles to highlight the `<wbr>` tag will not be visible in this inline editing view.
