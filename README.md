@@ -64,7 +64,7 @@ editor:
   config:
     # 1. Import the plugin:
     importModules:
-      - '@sebkln/ckeditor-wordbreak'
+      - { module: '@sebkln/ckeditor-wordbreak', exports: [ 'WordBreak' ] }
 
     toolbar:
       items:
@@ -88,3 +88,20 @@ Otherwise, all tags except `<wbr>` would be encoded in the frontend.
 
 Please note that this change only applies to TypoScript.
 `allowTags` is still needed in the CKEditor's YAML configuration for processing.
+
+
+### Using this plugin with EXT:visual_editor
+
+If you use the short notation with `importModules` (`- '@sebkln/ckeditor-wordbreak'`),
+the following error will occur when opening a page in the **Visual Editor backend module**: 
+
+> **TypeError**
+> 
+> Cannot access offset of type string on string
+
+Switch to the named import shown in the configuration above to fix this issue.
+
+When using the Visual Editor backend module, the _WordBreak_ button will work as expected in richtet fields.
+
+Please note that the Visual Editor only shows frontend styles.
+Therefore, the styles to highlight the `<wbr>` tag will not be visible in this inline editing view.

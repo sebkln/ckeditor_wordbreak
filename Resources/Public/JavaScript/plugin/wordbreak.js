@@ -1,7 +1,7 @@
 import * as Core from '@ckeditor/ckeditor5-core';
 import * as UI from '@ckeditor/ckeditor5-ui';
 
-export default class WordBreak extends Core.Plugin {
+export class WordBreak extends Core.Plugin {
     static pluginName = 'WordBreak';
 
     init() {
@@ -56,3 +56,5 @@ export default class WordBreak extends Core.Plugin {
         });
     }
 }
+
+export default WordBreak;
